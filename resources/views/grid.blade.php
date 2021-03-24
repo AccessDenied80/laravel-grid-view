@@ -4,15 +4,11 @@
     /** @var boolean $useFilters */
     $checkboxesExist = false;
 @endphp
-<style>
-    .table-bordered tfoot tr td {
-        border-width: 0;
-    }
-</style>
+
 <div class="card">
     <div class="card-header">
         @if($title)
-            <h2 class="card-title">{!! $title !!}</h2>
+            <h3 class="card-title">{!! $title !!}</h3>
         @endif
         <div class="float-right">
             @if ($paginator->onFirstPage())
@@ -36,8 +32,12 @@
             @endif
         </div>
     </div>
-    <div class="card-body">
+    <div class="card-body p-0">
+        <table class="table table-striped">
+
+{{--
         <table class="table @if($tableBordered) table-bordered @endif @if($tableStriped) table-striped @endif @if($tableHover) table-hover @endif @if($tableSmall) table-sm @endif">
+--}}
             <thead>
                 <tr>
                     <th width="5%">#</th>
