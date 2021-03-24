@@ -13,6 +13,8 @@ class GridViewServiceProvider extends ServiceProvider
 {
     public function boot()
     {
+        echo "test";
+        exit;
         $this->loadViewsFrom($this->packagePath('resources/views'), 'grid_view');
         $this->loadTranslationsFrom($this->packagePath('resources/lang'), 'grid_view');
 
